@@ -10,14 +10,10 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - network
-
-  homesimulator:
-    build:
-      context: ./homesimulator
-    depends_on:
-      - db
-    networks:
-      - network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
 
   watthome:
     build:
