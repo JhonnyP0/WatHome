@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='stylessettings.css') }}">
+{% endblock %}
+
+{% block title %}Actaul Usage{% endblock %}
+
+{% block content %}
+<h1>Actual Usage</h1>
+<p>Here you can adjust your preferences.</p>
+{% endblock %}
