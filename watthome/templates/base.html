@@ -15,8 +15,10 @@
 <body>
     <div id="header"><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i>WATTHOME<i class="fa-solid fa-plug"></i></div>
     <div id="menu">
-            <h1>WattHome</h1>
-            <i class="fa-solid fa-plug" id="logo"></i>
+            <div id="logocont">
+             <h1 id="logotext">WattHome</h1>
+             <i class="fa-solid fa-plug" id="logo"></i>
+            </div>
             <a href="{{ url_for('actualusage') }}"><div class="opt">Actual Usage</div></a>
             <a href="{{ url_for('dailyusage') }}"><div class="opt">Daily Usage</div></a>
             <a href="{{ url_for('monthlyusage') }}"><div class="opt">Monthly Usage</div></a>
